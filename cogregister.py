@@ -10,7 +10,8 @@ commandregister = [
     'commands.fun.badtranslate',
     'commands.fun.interjection',
     'commands.fun.owoify',
-    'commands.core.help'
+    'commands.core.help',
+    'commands.information.github'
 ]
 
 eventregister = [
