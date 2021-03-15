@@ -7,9 +7,12 @@
 # Note: events is also intended to be used for tasks, as well.
 
 commandregister = [
-    'commands.examplecommand'
+    'commands.fun.badtranslate',
+    'commands.fun.interjection',
+    'commands.fun.owoify',
+    'commands.core.help'
 ]
 
 eventregister = [
-    'events.exampleevent'
+    'events.pingdialog'
 ]

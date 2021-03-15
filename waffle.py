@@ -3,14 +3,17 @@ from discord.ext import commands
 from config import getarg
 from cogregister import commandregister, eventregister
 
-
 # Creates two types of bots based on the value of the --no-auto-sharding flag
 if getarg('no_auto_sharding'):
     bot = commands.Bot
 else:
     bot = commands.AutoShardedBot
+
 # Initialize method into bot object
-bot = bot(command_prefix=getarg('prefix'))
+bot = bot(command_prefix=getarg('prefix'),
+    help_command=None
+)
+
 
 
 # Loading cogs from register
