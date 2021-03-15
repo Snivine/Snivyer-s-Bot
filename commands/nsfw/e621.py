@@ -13,7 +13,7 @@ class e621(commands.Cog):
 
     @commands.command(description="Fetches a post from e621")
     async def e621(self, ctx, *, content):
-        if ctx.channel.is_nsfw():
+        if not ctx.channel.is_nsfw():
             ctx.send("This is a NSFW-only Command")
         elif content == "":
             ctx.send("You have to input a set of tags to search")
