@@ -1,5 +1,5 @@
-# waffle
-A libre framework for creating Discord.py bots. Simple, structured, and painless.
+# Snivyer's bot
+An open source basic fun bot based out of Waffle from Reperak and also some of his own bot
 
 ## Making a command
 1. Create a Python file in the [command folder](commands)
