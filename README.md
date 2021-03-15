@@ -8,3 +8,7 @@ An open source basic fun bot based out of Waffle from Reperak and also some of h
 
 ## Colaborating
 If you want to colaborate send PRs here please, any PR to main or any other branch will be automatically rejected
+
+## One More Thing, Depencies
+I have no fucking idea what dependencies I'm using, if you get errors when trying to run the bot try installing any missing dependencies from pip
+yes, pip is requiered because I'm not making a tutorial on how to install dependencies for python manually
