@@ -20,8 +20,8 @@ import translators
 
 prefix = getarg('prefix')
 embed = discord.Embed(
-    title='Botperak Information',
-    description=f'My prefix is `{prefix}`. Type `{prefix}help` for a list of my commands.'
+    title="Snivyer's Maid",
+    description=f'My prefix is `{prefix}` . Type `{prefix}help` for a list of my commands.'
 )
 
 ###

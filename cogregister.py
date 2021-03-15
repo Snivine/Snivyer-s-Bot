@@ -14,5 +14,6 @@ commandregister = [
 ]
 
 eventregister = [
-    'events.pingdialog'
+    'events.pingdialog',
+    'events.status'
 ]
