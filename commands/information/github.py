@@ -117,9 +117,9 @@ class github(commands.Cog):
             inline=True
         )
 
-        # Remember the bot!
+        # Le Joke
         repoembed.set_footer(
-            text='Beep boop. I\'m still in beta.\nCheck out my source code at https://github.com/ReperakPro/Botperak.'
+            text="I'm here to serve you UwU"
         )
 
         await ctx.send(embed=repoembed)
