@@ -6,7 +6,5 @@ An open source basic fun bot based out of Waffle from Reperak and also some of h
 2. Write the command inside [a cog](https://discordpy.readthedocs.io/en/latest/ext/commands/cogs.html)
 3. Register your command in [cogregister.py](cogregister.py)
 
-## Running
-Install Discord.py - `$ pip3 install discord.py`
-
-Running the bot - `$ python3 waffle.py -t <TOKEN> -p <PREFIX>`
+## Colaborating
+If you want to colaborate send PRs here please, any PR to main or any other branch will be automatically rejected
