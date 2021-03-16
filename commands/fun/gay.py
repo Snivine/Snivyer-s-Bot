@@ -21,19 +21,12 @@ emoji = "🏳️‍🌈"
 class gay(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-
     @commands.command(description="Fetch the ammount of gayness of a person")
     async def gay(self, ctx, *, arg):
+        if arg == None:
+            await ctx.send(f"You are {ammount}% gay {emoji}")
+        else:
             await ctx.send(f"{arg} is {ammount}% gay {emoji}")
-
-###
-#non-argument command (workaround)
-###
-
-@gay.error
-async def gay_error(ctx, error):
-    if isinstance(error,discord.ext.commands.errors.MissingRequiredArgument):
-        await ctx.send(f"You are {ammount}% gay {emoji}")
 
 ###
 # Cog
