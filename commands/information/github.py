@@ -11,7 +11,6 @@ from util.cooldownhandler import cooldownhandler
 
 import github as pygithub
 
-
 ###
 # Objects
 ###
