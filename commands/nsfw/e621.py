@@ -26,7 +26,7 @@ class e621(commands.Cog):
 
             url += f"&max=16&page={randpage}"
 
-            user_agent = { "User-agent": "Snivyer's Maid" }
+            user_agent = { "User-agent": "Snivyer's Maid/0.1.0 (by Snivyer1910)" }
 
             print(url)
             res = requests.get(url, headers = user_agent)
