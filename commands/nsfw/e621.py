@@ -17,7 +17,6 @@ class e621(commands.Cog):
            await ctx.send("This is a NSFW-only Command")
         else:
             randpage = randint(1, 30)
-            randpost = randint(0, 15)
             tags = content.split(",")
             url = "https://e621.net/posts.json?tags="
 
@@ -31,7 +30,20 @@ class e621(commands.Cog):
             print(url)
             res = requests.get(url, headers = user_agent)
             posts = json.loads(res.text)
-            await ctx.send(posts["posts"][randpost]["file"]["url"])
+
+            randPost = randint(0, len(posts["posts"]) - 1)
+  
+            post = posts["posts"][randPost]
+            postUrl = post["file"]["url"]
+  
+            # Create embed
+  
+            postEmbed = discord.Embed(color=discord.Color.blue())
+            postEmbed.set_author(name=ctx.author.display_name, url=discord.Embed.Empty, icon_url=ctx.author.avatar_url)
+            postEmbed.set_image(url=postUrl)
+            postEmbed.set_footer(text=f"Tags: {content} • Score {post['score']['total']}" )
+  
+            await ctx.send(embed=postEmbed)
 
 def setup(bot):
     bot.add_cog(e621(bot))
