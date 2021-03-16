@@ -15,9 +15,7 @@ class e621(commands.Cog):
     @commands.command(description="Fetches a post from e621")
     async def e621(self, ctx, *, content):
         if not ctx.channel.is_nsfw():
-            ctx.send("This is a NSFW-only Command")
-        elif content == "":
-            ctx.send("You need to provide a set of tags to search")
+           await ctx.send("This is a NSFW-only Command")
         else:
             tags = content.split(",")
             url = "https://e621.net/posts.json?tags="
