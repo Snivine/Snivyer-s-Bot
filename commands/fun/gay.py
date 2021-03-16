@@ -11,7 +11,6 @@ import asyncio
 #random gen
 ###
 
-ammount = random.randint(1, 100)
 emoji = "🏳️‍🌈"
 
 ###
@@ -24,8 +23,10 @@ class gay(commands.Cog):
     @commands.command(description="Fetch the ammount of gayness of a person")
     async def gay(self, ctx, *, arg):
         if arg == None:
+            ammount = random.randint(1, 100)
             await ctx.send(f"You are {ammount}% gay {emoji}")
         else:
+            ammount = random.randint(1, 100)
             await ctx.send(f"{arg} is {ammount}% gay {emoji}")
 
 ###
