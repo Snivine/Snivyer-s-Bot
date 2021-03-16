@@ -32,7 +32,7 @@ class gay(commands.Cog):
 
 @gay.error
 async def gay_error(ctx, error):
-    if isinstance(error,discord.ext.commands.errors.MissingRequiredArgument)
+    if isinstance(error,discord.ext.commands.errors.MissingRequiredArgument):
         await ctx.send(f"You are {ammount}% gay {emoji}")
 
 ###
