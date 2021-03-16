@@ -43,7 +43,7 @@ class e621(commands.Cog):
             postEmbed.set_footer(text=f"Tags: {content} • Score {post['score']['total']}" )
   
             await ctx.send(embed=postEmbed)
-            print(f"{url} parsed succesfully, image sent")
+            print(f"{url} parsed successfully, image sent")
 
 def setup(bot):
     bot.add_cog(e621(bot))
