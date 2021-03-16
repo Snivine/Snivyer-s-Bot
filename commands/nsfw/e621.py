@@ -26,7 +26,7 @@ class e621(commands.Cog):
 
             user_agent = { "User-agent": "Snivyer's Maid/0.1.0 (by Snivyer1910)" }
 
-            print(url)
+            print(f"parsing {url}")
             res = requests.get(url, headers = user_agent)
             posts = json.loads(res.text)
 
@@ -43,6 +43,7 @@ class e621(commands.Cog):
             postEmbed.set_footer(text=f"Tags: {content} • Score {post['score']['total']}" )
   
             await ctx.send(embed=postEmbed)
+            print(f"{url} parsed succesfully, image sent")
 
 def setup(bot):
     bot.add_cog(e621(bot))
