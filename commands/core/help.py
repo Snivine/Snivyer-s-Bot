@@ -28,6 +28,11 @@ class helpcommand(commands.Cog):
                 'name': ':zany_face: Fun',
                 'description': 'Commands for fun that have no practical use.',
                 'commands': []
+            },
+            "nsfw": {
+                "name": ":smirk: Category for horny people",
+                "description": "NSFW Channels ONLY",
+                "commands": []
             }
         }
 
