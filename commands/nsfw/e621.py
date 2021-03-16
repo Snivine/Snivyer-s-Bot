@@ -16,14 +16,13 @@ class e621(commands.Cog):
         if not ctx.channel.is_nsfw():
            await ctx.send("This is a NSFW-only Command")
         else:
-            randpage = randint(1, 30)
             tags = content.split(",")
             url = "https://e621.net/posts.json?tags="
 
             for t in tags:
                 url += t + "+"
 
-            url += f"&max=16&page={randpage}"
+            url += f"&max=319&page=1"
 
             user_agent = { "User-agent": "Snivyer's Maid/0.1.0 (by Snivyer1910)" }
 
