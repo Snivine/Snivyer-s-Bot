@@ -24,10 +24,10 @@ class gay(commands.Cog):
 
     @commands.command(description="Fetch the ammount of gayness of a person")
     async def gay(self, ctx, *, arg):
-        if arg == "":
-            await ctx.send("You are {ammount}% gay {emoji}")
+        if arg == None:
+            await ctx.send(f"You are {ammount}% gay {emoji}")
         else:
-            await ctx.send("{arg} is {ammount}% gay {emoji}")
+            await ctx.send(f"{arg} is {ammount}% gay {emoji}")
 
 ###
 # Cog
