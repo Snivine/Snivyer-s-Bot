@@ -12,7 +12,8 @@ commandregister = [
     'commands.fun.owoify',
     'commands.core.help',
     'commands.information.github',
-    'commands.fun.gay'
+    'commands.fun.gay',
+    'commands.nsfw.e621'
 ]
 
 eventregister = [
