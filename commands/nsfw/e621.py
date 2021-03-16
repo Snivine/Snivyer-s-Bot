@@ -47,4 +47,4 @@ class e621(commands.Cog):
 def setup(bot):
     bot.add_cog(e621(bot))
 
-#fixed some shit and made it random, thanks tto Isfy/Lifo to help me with this
+#fixed some shit and made it random, thanks to Isfy/Lifo to help me with this

@@ -50,7 +50,7 @@ class github(commands.Cog):
             return
         try:
             repo = githubobject.get_repo(arg)
-        except pygithub.UnknownObjectException:  # UnknownObjectException is a dumb way of saying "not found"
+        except pygithub.UnknownObjectException:  # UnknownObjectException is a dumb way of saying "not found", S: I totally agree
             await ctx.send(embed=errorbox('I couldn\'t find that repo. Have you checked for typos?'))
             return
 

@@ -5,6 +5,7 @@
 import discord
 from discord.ext import commands
 from random import randint
+import random
 import asyncio
 
 ###
@@ -12,6 +13,7 @@ import asyncio
 ###
 
 emoji = "🏳️‍🌈"
+
 
 ###
 #acutal command
@@ -23,12 +25,14 @@ class gay(commands.Cog):
 
     @commands.command(description="Fetch the ammount of gayness of a person")
     async def gay(self, ctx, *, arg=None):
-        gaynumber = randint(0, 100)
+        possibilites = [randint(0, 100)] * 90 + ["999"] * 4 + ["255"] * 4 + ["`yes.`"] * 1
+        gaynumber = random.choice(possibilites)
 
         # If no argument passed, set the phrase to "You are"
         phrase = "You are" if arg is None else f"{arg} is"
 
         await ctx.send(f"{phrase} {gaynumber}% gay {emoji}")
+        print(f"Generated gay number: {gaynumber}")
 
 ###
 # Cog
