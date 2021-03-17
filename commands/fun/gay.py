@@ -24,6 +24,7 @@ class gay(commands.Cog):
         messagetypes = ["Normal"] * 9999 + ["Meme"] * 1
         randommessage = random.choice(messagetypes) #This took me more than it needed to.
         # no, really, this shit doesn't accept floats and I was trying to use floats
+        print(f"Choosen message type = {messagetypes}")
 
         if randommessage == "Meme":
             await ctx.send("Idk man ask them lmao") #suggested by Floofy Foxor and MrRhino
