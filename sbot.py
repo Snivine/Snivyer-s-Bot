@@ -3,6 +3,8 @@ from config import getarg
 from cogregister import commandregister, eventregister
 import os
 
+print(f"Process is running with PID = {os.getpid()}")
+
 # Creates two types of bots based on the value of the --no-auto-sharding flag
 if getarg('no_auto_sharding'):
     bot = commands.Bot
@@ -27,6 +29,3 @@ for x in eventregister:
 bot.run(
     getarg('token')
 )
-
-# Confirmation of running
-print(f"Process is running with PID = {os.getpid()}")
