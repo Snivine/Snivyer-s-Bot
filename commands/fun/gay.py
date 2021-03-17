@@ -29,7 +29,7 @@ class gay(commands.Cog):
         if randommessage == "Meme":
             await ctx.send("Idk man ask them lmao") #suggested by Floofy Foxor and MrRhino
         else:
-             possibilites = [random.randint(0, 100)] * 9799 + ["999"] * 100 + ["255"] * 100 + ["Yes."] * 1
+             possibilites = [random.randint(0, 100)] * 9799 + ["999"] * 100 + ["Infinity"] * 100 + ["Yes."] * 1
              gaynumber = random.choice(possibilites) #Tried a lot of methods to get this to work, then noticed I'm stupid
 
              # If no argument passed, set the phrase to "You are"
