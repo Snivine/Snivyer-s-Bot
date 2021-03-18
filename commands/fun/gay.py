@@ -21,7 +21,7 @@ class gay(commands.Cog):
 
     @commands.command(description="Fetch the ammount of gayness of a person")
     async def gay(self, ctx, *, arg=None):
-        messagetypes = ["Normal"] * 9999 + ["Meme"] * 1
+        messagetypes = ["Normal"] * 99 + ["Meme"] * 1
         randommessage = random.choice(messagetypes) #This took me more than it needed to.
         # no, really, this shit doesn't accept floats and I was trying to use floats
         print(f"Choosen message type = {randommessage}")
@@ -29,7 +29,7 @@ class gay(commands.Cog):
         if randommessage == "Meme":
             await ctx.send("Idk man ask them lmao") #suggested by Floofy Foxor and MrRhino
         else:
-             possibilites = [random.randint(0, 100)] * 9799 + ["999"] * 100 + ["Infinity"] * 100 + ["Yes."] * 1
+             possibilites = [random.randint(0, 100)] * 9590 + ["999"] * 200 + ["Infinity"] * 200 + ["Yes."] * 10
              gaynumber = random.choice(possibilites) #Tried a lot of methods to get this to work, then noticed I'm stupid
 
              # If no argument passed, set the phrase to "You are"
