@@ -18,7 +18,7 @@ class gay(commands.Cog):
             await ctx.send("Idk man ask them lmao")
         else:
              possibilites = random.randint(0, 100), "999", "Infinity", "Yes."
-             gaynumber = random.choices(possibilites, weights=[98, 0.01, 0.01, 0.5])
+             gaynumber = random.choices(possibilites, weights=[95.9, 2, 2, 0.1])
 
              # If no argument passed, set the phrase to "You are"
              phrase = "You are" if arg is None else f"{arg} is"

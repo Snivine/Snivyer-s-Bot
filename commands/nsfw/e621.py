@@ -4,9 +4,10 @@ from discord.ext import commands
 import json
 import requests
 from random import randint
+from config import getarg
 
 #cache
-user_agent = {"User-agent": "Snivyer's Maid/0.1.0 (by Snivyer1910)"}
+user_agent = getarg("e621useragent")
 
 #command
 
@@ -33,7 +34,7 @@ class e621(commands.Cog):
         url += f"&max=319&page=1"
 
         print(url) #do we need this?
-        res = requests.get(url, headers = user_agent)
+        res = requests.get(url, headers=user_agent)
         posts = json.loads(res.text)
 
         randPost = randint(0, len(posts["posts"]) - 1)
@@ -46,7 +47,7 @@ class e621(commands.Cog):
         postEmbed = discord.Embed(color=discord.Color.blue())
         postEmbed.set_author(name=ctx.author.display_name, url=discord.Embed.Empty, icon_url=ctx.author.avatar_url)
         postEmbed.set_image(url=postUrl)
-        postEmbed.set_footer(text=f"Tags: {content} • Score {post['score']['total']}" )
+        postEmbed.set_footer(text=f"Tags: {content} • Score {post['score']['total']}")
 
         await ctx.send(embed=postEmbed)
 
