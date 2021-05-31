@@ -6,9 +6,6 @@ import logging
 
 #this is most definitely not the way, but this is how Imma do it for now till I figure things out
 logging.basicConfig(level=logging.INFO)
-logging.basicConfig(level=logging.WARN)
-logging.basicConfig(level=logging.ERROR)
-logging.basicConfig(level=logging.CRITICAL)
 
 print(f"Process is running with PID = {getpid()}")
 
