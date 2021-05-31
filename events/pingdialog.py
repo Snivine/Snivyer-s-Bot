@@ -7,13 +7,6 @@ from config import getarg
 from discord.ext import commands
 import discord
 
-from util.embed import errorbox
-from util.cooldownhandler import cooldownhandler
-
-from random import choice
-
-import translators
-
 ###
 # Cache
 ###
