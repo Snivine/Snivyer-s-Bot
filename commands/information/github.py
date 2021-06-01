@@ -5,7 +5,7 @@
 import discord
 from discord.ext import commands
 
-from config import getarg
+from config import getconfig
 from util.embed import errorbox
 from util.cooldownhandler import cooldownhandler
 
@@ -16,7 +16,7 @@ import github as pygithub
 ###
 
 githubobject = pygithub.Github(
-    getarg('ghtoken')
+    getconfig('githubtoken')
 )
 
 ###

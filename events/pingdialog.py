@@ -2,7 +2,7 @@
 # Imports
 ###
 
-from config import getarg
+from config import getconfig
 
 from discord.ext import commands
 import discord
@@ -11,7 +11,7 @@ import discord
 # Cache
 ###
 
-prefix = getarg('prefix')
+prefix = getconfig('prefix')
 embed = discord.Embed(
     title="Snivyer's Maid",
     description=f'My prefix is `{prefix}` . Type `{prefix}help` for a list of my commands.'
