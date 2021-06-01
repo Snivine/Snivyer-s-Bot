@@ -27,7 +27,7 @@ class helpcommand(commands.Cog):
                 'commands': []
             },
             "nsfw": {
-                "name": ":: NSFW",
+                "name": ":underage: NSFW",
                 "description": "For horny stuff",
                 "commands": []
             }
