@@ -4,10 +4,12 @@ from discord.ext import commands
 import json
 import requests
 from random import randint
-from config import getarg
+from ast import literal_eval
 
-#cache
-user_agent = getarg("e621useragent")
+#dynamic user agent
+e6useragent = open("e621useragent.txt", "r")
+agent = e6useragent.read()
+user_agent = literal_eval(agent)
 
 #command
 
