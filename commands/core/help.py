@@ -1,9 +1,9 @@
 import discord
 from discord.ext import commands
-from config import getarg
+from config import getconfig
 from util.embed import errorbox
 
-prefix = getarg('prefix')
+prefix = getconfig('prefix')
 
 #command
 

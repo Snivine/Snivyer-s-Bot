@@ -133,4 +133,8 @@ run.bat
 run.sh
 bot.sh
 bot.bat
-e621.bat
+configtest.bat
+
+#config file
+config.ini
+e621useragent.txt

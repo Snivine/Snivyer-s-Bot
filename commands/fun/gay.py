@@ -2,11 +2,6 @@
 
 from discord.ext import commands
 import random
-from config import getarg
-
-#prefix
-
-prefix = getarg("prefix")
 
 #command
 
