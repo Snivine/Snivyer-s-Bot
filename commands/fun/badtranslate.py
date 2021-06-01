@@ -4,19 +4,15 @@
 
 import discord
 from discord.ext import commands
-
 from util.embed import errorbox
 from util.cooldownhandler import cooldownhandler
-
 from asgiref.sync import sync_to_async
-
 from random import choice
-
 import googletrans
 from googletrans import Translator
-
 import httpx
 from httpx import Timeout
+
 
 ###
 # Server
@@ -95,8 +91,8 @@ class badtranslate(commands.Cog):
         self.bot = bot
 
     @commands.cooldown(limit, cooldown, commands.BucketType.user)
-    @commands.command(description='fun~Runs text through Google Translate five times through random languages to '
-                                  'completely ruin it.~badtranslate <text/"reply">')
+    @commands.command(description=f'fun~Runs text through Google Translate five times through random languages to '
+                                  f'completely ruin it.~badtranslate <text/"reply">')
     async def badtranslate(self, ctx, *, content):
         if ctx.author in cooldownblacklist:
             return

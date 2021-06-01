@@ -15,7 +15,7 @@ class e621(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(description="Fetches a post from e621")
+    @commands.command(description=f'nsfw~Fetches a post from e621~e621 `<tags>`')
     async def e621(self, ctx, *, content=None):
         if not ctx.channel.is_nsfw(): #checks if the channel is nsfw
             await ctx.send("This is a NSFW-only Command")

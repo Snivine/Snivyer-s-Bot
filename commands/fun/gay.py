@@ -2,6 +2,11 @@
 
 from discord.ext import commands
 import random
+from config import getarg
+
+#prefix
+
+prefix = getarg("prefix")
 
 #command
 
@@ -9,7 +14,7 @@ class gay(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(description="Fetch the amount of gayness of a person")
+    @commands.command(description=f'fun~Fetch how gay is someone~gay `<user>`')
     async def gay(self, ctx, *, arg=None):
         messagetypes = "Meme", "Normal"
         randommessage = random.choices(messagetypes, weights=[99, 1])

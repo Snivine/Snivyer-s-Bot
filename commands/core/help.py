@@ -1,20 +1,17 @@
 import discord
 from discord.ext import commands
-from discord.ext.commands import HelpCommand
-from discord.ext import commands
 from config import getarg
 from util.embed import errorbox
-import datetime
 
 prefix = getarg('prefix')
 
-# Actual command
+#command
 
 class helpcommand(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(description='information~Get help and syntax for commands.~help *<category/command>*')
+    @commands.command(description=f'information~Get help and syntax for commands.~help `<category/command>`')
     async def help(self, ctx, arg=None):
         cmdlist = {}
 
@@ -30,8 +27,8 @@ class helpcommand(commands.Cog):
                 'commands': []
             },
             "nsfw": {
-                "name": ":smirk: Category for horny people",
-                "description": "NSFW Channels ONLY",
+                "name": ":: NSFW",
+                "description": "For horny stuff",
                 "commands": []
             }
         }
@@ -83,11 +80,12 @@ class helpcommand(commands.Cog):
 
                 embed.add_field(
                     name=':arrow_right:   ' + prefix + item['name'],
-                    value=item['description'] + '\n\n' + 'Usage: `' + item['usage'] + '`'
+                    value=item['description'] + '\n\n' + 'Usage: ' + item['usage'] + ''
                 )
 
         await ctx.send(embed=embed)
 
+#cog
 
 def setup(bot):
     bot.add_cog(helpcommand(bot))

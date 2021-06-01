@@ -19,7 +19,6 @@ githubobject = pygithub.Github(
     getarg('ghtoken')
 )
 
-
 ###
 # Cooldown Blacklist
 ###
@@ -44,7 +43,7 @@ class github(commands.Cog):
         self.bot = bot
 
     @commands.cooldown(limit, cooldown, commands.BucketType.user)
-    @commands.command(description='information~Gets info about a GitHub repo~github <owner>/<repo>')
+    @commands.command(description=f'information~Gets info about a GitHub repo~github <owner>/<repo>')
     async def github(self, ctx, arg):
         if ctx.author in cooldownblacklist:
             return

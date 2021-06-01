@@ -35,7 +35,7 @@ class owoify(commands.Cog):
         self.bot = bot
 
     @commands.cooldown(limit, cooldown, commands.BucketType.user)
-    @commands.command(description='fun~OwOify your text!~owoify <text>/<"reply">')
+    @commands.command(description=f'fun~OwOify your text!~owoify `<text>/<"reply">`')
     async def owoify(self, ctx, *, content):
         if ctx.author in cooldownblacklist:
             return
