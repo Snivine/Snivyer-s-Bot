@@ -1,18 +1,12 @@
-###
-# Imports
-###
+#imports
 
 import discord
 from discord.ext import commands
-
 from asgiref.sync import sync_to_async
-
 from util.cooldownhandler import cooldownhandler
 
 
-###
-# Cache
-###
+#cache
 
 copypasta = 'I\'d just like to interject for a moment. What you\'re referring to as Linux, is in fact, GNU/Linux, ' \
             'or as I\'ve recently taken to calling it, GNU plus Linux. Linux is not an operating system unto itself, ' \
@@ -62,10 +56,8 @@ class interjection(commands.Cog):
         self.bot = bot
 
     @commands.cooldown(limit, cooldown, commands.BucketType.user)
-    @commands.command(description='fun~Make a custom GNU/Linux copypasta.~interjection <word1>/<word2>')
+    @commands.command(description=f'fun~Make a custom GNU/Linux copypasta.~interjection `<word1>/<word2>`')
     async def interjection(self, ctx, *, args):
-        if ctx.author in cooldownblacklist:
-            return
 
         splittext = str(args).split('/')
         finalized = await copypastaify(splittext[0], splittext[1])

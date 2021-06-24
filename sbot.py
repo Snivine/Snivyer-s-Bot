@@ -1,32 +1,48 @@
 from discord.ext import commands
-from config import getarg
 from cogregister import commandregister, eventregister
-from os import getpid
+from config import getconfig
+import os
 import logging
+import configparser
 
+#this is most definitely not the way, but this is how Imma do it for now till I figure things out
 logging.basicConfig(level=logging.INFO)
 
-print(f"Process is running with PID = {getpid()}")
+if not os.path.isfile("config.ini"):
+    botconfig = configparser.ConfigParser()
 
-if getarg('no_auto_sharding'):
-    bot = commands.Bot
-else:
-    bot = commands.AutoShardedBot
+    botconfig["Bot Config"] = {
+        "token": "tokenhere",
+        "githubtoken": "tokenhere",
+        "ownerid": "owneridhere",
+        "prefix": "prefixhere"
+    }
 
-bot = bot(command_prefix=getarg('prefix'),
-    help_command=None
+    with open('config.ini', 'w') as conf:
+        botconfig.write(conf)
+
+if not os.path.isfile("e621useragent.txt"):
+    useragent = open('e621useragent.txt', 'w')
+    useragent.write('#e621 user agent format: {"User-Agent": "Your Agent Name /Your Agent Version (By Your Name)"}')
+    print("Config files created, please read and edit very carefully to make sure that the bot works")
+    exit()
+
+print(f"Process is running with PID = {os.getpid()}")
+
+bot = commands.AutoShardedBot
+
+bot = bot(command_prefix=getconfig('prefix'),
+help_command=None
 )
 
-
-
-# Loading cogs from register
 for x in commandregister:
     bot.load_extension(x)
 for x in eventregister:
     bot.load_extension(x)
 
-
-# Running
 bot.run(
-    getarg('token')
+    getconfig('token')
+)
+bot.owner_id(
+    getconfig("ownerid")
 )
