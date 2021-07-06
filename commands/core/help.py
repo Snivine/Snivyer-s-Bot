@@ -10,7 +10,8 @@ prefix = getconfig('prefix')
 class helpcommand(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-
+    
+    # Should I unhardcode this?
     @commands.command(description=f'information~Get help and syntax for commands.~help `<category/command>`')
     async def help(self, ctx, arg=None):
         cmdlist = {}
@@ -85,7 +86,7 @@ class helpcommand(commands.Cog):
 
         await ctx.send(embed=embed)
 
-#cog
+# Cog
 
 def setup(bot):
     bot.add_cog(helpcommand(bot))

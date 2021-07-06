@@ -58,5 +58,5 @@ class e621(commands.Cog):
 def setup(bot):
     bot.add_cog(e621(bot))
 
-#fixed some shit and made it random, thanks to Isfy/Lifo to help me with this
-#Implemented Reperak's changes, thanks bro
+# Fixed some shit and made it random, thanks to Isfy/Lifo to help me with this
+# Implemented Reperak's changes, thanks bro

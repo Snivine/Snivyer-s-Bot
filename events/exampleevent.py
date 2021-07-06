@@ -1,3 +1,5 @@
+# Should I remove this thing? Since really this is not a template anymore
+
 from discord.ext import commands
 
 
