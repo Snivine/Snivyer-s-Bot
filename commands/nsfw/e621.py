@@ -1,4 +1,7 @@
-#Imports
+###
+# Imports
+###
+
 import discord
 from discord.ext import commands
 import json
@@ -6,12 +9,17 @@ import requests
 from random import randint
 from ast import literal_eval
 
-#dynamic user agent
+###
+# Dynamic User Agent
+###
+
 e6useragent = open("e621useragent.txt", "r")
 agent = e6useragent.read()
 user_agent = literal_eval(agent)
 
-#command
+###
+# Command
+###
 
 class e621(commands.Cog):
     def __init__(self, bot):
@@ -53,7 +61,9 @@ class e621(commands.Cog):
 
         await ctx.send(embed=postEmbed)
 
-#cog
+###
+# Setup Command
+###
 
 def setup(bot):
     bot.add_cog(e621(bot))
