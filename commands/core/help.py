@@ -1,3 +1,7 @@
+###
+# Imports
+###
+
 import discord
 from discord.ext import commands
 from config import getconfig
@@ -5,7 +9,9 @@ from util.embed import errorbox
 
 prefix = getconfig('prefix')
 
-#command
+###
+# Command
+###
 
 class helpcommand(commands.Cog):
     def __init__(self, bot):
@@ -86,7 +92,9 @@ class helpcommand(commands.Cog):
 
         await ctx.send(embed=embed)
 
-# Cog
+###
+# Setup command
+###
 
 def setup(bot):
     bot.add_cog(helpcommand(bot))
