@@ -16,7 +16,7 @@ class culo(commands.Cog):
     async def on_message(self, message):
         if message.author == self.bot.user:
             return
-        if "culo" in message.content:
+        if message.content == "culo":
             await message.channel.send("culo")
 
 ###
