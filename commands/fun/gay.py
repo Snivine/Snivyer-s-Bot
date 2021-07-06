@@ -1,9 +1,13 @@
-#imports
+###
+# Imports
+###
 
 from discord.ext import commands
 import random
 
-#command
+###
+# Command
+###
 
 class gay(commands.Cog):
     def __init__(self, bot):
@@ -25,9 +29,11 @@ class gay(commands.Cog):
 
              await ctx.send(f"{phrase} {str(gaynumber)[1:-1]}% gay 🏳️‍🌈")
 
-#cog
+###
+# Setup Command
+###
 
 def setup(bot):
     bot.add_cog(gay(bot))
 
-#Reperak bad developer /s
+# Reperak bad developer /s
