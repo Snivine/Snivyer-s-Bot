@@ -53,9 +53,7 @@ for x in commandregister:
 for x in eventregister:
     bot.load_extension(x)
 
-###
 # This is kinda broken
-###
 
 bot.run(
     getconfig('token')
